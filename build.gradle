@@ -1,12 +1,34 @@
-plugins {
-    id 'com.android.library'
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:7.4.2' 
+    }
 }
 
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish' 
+
 android {
-    namespace 'dabria.jinx.imerio' // ဒီနေရာမှာ သင့် package name ကို ထည့်ရပါမယ်
+    namespace 'dabria.jinx.imerio'
     compileSdk 34
     
     defaultConfig {
         minSdk 21
+    }
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.KhantZawMinnOo'
+                artifactId = 'Imerio'
+                version = '1.0'
+            }
+        }
     }
 }
