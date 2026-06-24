@@ -4,22 +4,23 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-
-        classpath 'com.android.tools.build:gradle:7.4.2' 
+        
+           classpath 'com.android.tools.build:gradle:4.2.2'
     }
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish' 
+apply plugin: 'maven-publish'
 
 android {
     namespace 'dabria.jinx.imerio'
-    compileSdk 34
+    compileSdkVersion 30
     
     defaultConfig {
-        minSdk 21
+        minSdkVersion 21
     }
 }
+
 afterEvaluate {
     publishing {
         publications {
