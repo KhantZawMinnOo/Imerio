@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'dabria.jinx.imerio' // ဒီနေရာမှာ သင့် package name ကို ထည့်ရပါမယ်
+    compileSdk 34
+    
+    defaultConfig {
+        minSdk 21
+    }
+}
