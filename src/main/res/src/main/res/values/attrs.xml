@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="ImerioCalendarView">
+
+		<attr name="normal_cell_color" format="color"/>
+		<attr name="current_date_cell_color" format="color"/>
+		<attr name="weekend_text_color" format="color"/>
+		<attr name="text_color" format="color"/>
+
+	</declare-styleable>
+</resources>
+
